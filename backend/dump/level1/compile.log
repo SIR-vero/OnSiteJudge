@@ -1,0 +1,4 @@
+  File "pypy.py", line 2
+    
+                  ^
+SyntaxError: unexpected EOF while parsing
