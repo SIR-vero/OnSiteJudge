@@ -12,14 +12,14 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Login extends JFrame {
+public class Connect extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField textipAddress;
 	private JTextField textPort;
 
-	public Login() {
+	public Connect() {
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 		} catch (Exception e1) {
@@ -85,7 +85,7 @@ public class Login extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Login frame = new Login();
+					Connect frame = new Connect();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
