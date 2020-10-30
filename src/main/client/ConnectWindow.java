@@ -23,6 +23,8 @@ public class ConnectWindow extends JFrame {
 	private JTextField textipAddress;
 	private JTextField textPort;
 	private Socket s1;
+	private JTextField password;
+	private JTextField loginID;
 
 	public ConnectWindow() {
 		try {
@@ -32,9 +34,9 @@ public class ConnectWindow extends JFrame {
 		}
 		
 		setResizable(false);
-		setTitle("Connect");
+		setTitle("ParticipantLogin");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setSize(300, 380);
+		setSize(500, 500);
 		setLocationRelativeTo(null);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -51,12 +53,12 @@ public class ConnectWindow extends JFrame {
 		contentPane.add(ipAddressDescp);
 		
 		JLabel portDescp = new JLabel("Port");
-		portDescp.setBounds(134, 180, 27, 14);
+		portDescp.setBounds(338, 32, 27, 14);
 		contentPane.add(portDescp);
 		
 		textPort = new JTextField();
 		textPort.setColumns(10);
-		textPort.setBounds(70, 205, 156, 27);
+		textPort.setBounds(280, 57, 156, 27);
 		contentPane.add(textPort);
 		
 		JButton btnConnect = new JButton("Connect");
@@ -70,7 +72,7 @@ public class ConnectWindow extends JFrame {
 				connect(textipAddress.getText(), Integer.parseInt(textPort.getText()));
 			}
 		});
-		btnConnect.setBounds(102, 291, 91, 23);
+		btnConnect.setBounds(208, 404, 91, 23);
 		contentPane.add(btnConnect);
 		
 		JLabel ipEg = new JLabel("(eg. 192.168.3.1)");
@@ -78,8 +80,26 @@ public class ConnectWindow extends JFrame {
 		contentPane.add(ipEg);
 		
 		JLabel lblNewLabel = new JLabel("(eg. 8129)");
-		lblNewLabel.setBounds(122, 245, 52, 14);
+		lblNewLabel.setBounds(323, 95, 52, 14);
 		contentPane.add(lblNewLabel);
+		
+		JLabel lblPassword = new JLabel("Password");
+		lblPassword.setBounds(338, 249, 59, 14);
+		contentPane.add(lblPassword);
+		
+		password = new JTextField();
+		password.setColumns(10);
+		password.setBounds(280, 274, 156, 27);
+		contentPane.add(password);
+		
+		JLabel lblLginid = new JLabel("LginID");
+		lblLginid.setBounds(125, 249, 38, 14);
+		contentPane.add(lblLginid);
+		
+		loginID = new JTextField();
+		loginID.setColumns(10);
+		loginID.setBounds(70, 274, 156, 27);
+		contentPane.add(loginID);
 	}
 	
 	private void connect(String address, int port){
