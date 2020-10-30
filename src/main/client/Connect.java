@@ -13,8 +13,8 @@ public class Connect {
 	final String address;
 	final int port;
 	private Socket s1 = null;
-	private ObjectInputStream inStream;
-	private ObjectOutputStream outStream;
+	private ObjectInputStream inStream = null;
+	private ObjectOutputStream outStream = null;
 	private Thread sendingThread;
 	
 	
@@ -28,19 +28,25 @@ public class Connect {
 	}
 	
 	public InputStream getIS() throws IOException {
+		//System.out.println("return SocketInputStream");
 		return s1.getInputStream();
 	}
 	
 	public OutputStream getOS() throws IOException {
+		//System.out.println("return SocketOutputStream");
 		return s1.getOutputStream();
 	}
 	
 	public void setObjectInStream() throws IOException {
+		//System.out.println("no set ObjectInputStream");
 		inStream = new ObjectInputStream(getIS());
+		//System.out.println("set ObjectInputStream");
 	}
 	
 	public void setObjectOutStream() throws IOException {
+		//System.out.println("no set ObjectOutputStream");
 		outStream = new ObjectOutputStream(getOS());
+		//System.out.println("set ObjectOutputStream");
 	}
 	
 	public void close() throws IOException {

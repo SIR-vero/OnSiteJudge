@@ -1,7 +1,10 @@
 package main.packets;
 
-public class ServerParticipantPacket extends Packet {
+import java.io.Serializable;
 
+public class ServerParticipantPacket extends Packet implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 	private String loginID;			//login ID of participant 
 	private String password;		//password of participant (not encrypted)
 	private boolean boolResponse;	//a boolean response (dependent on type of packet)

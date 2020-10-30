@@ -25,6 +25,14 @@ public class Packet implements Serializable {
 	private int typeofPacket;
 	
 	public Packet(int typeofPacket){
+		this.setTypeofPacket(typeofPacket);
+	}
+
+	public int getTypeofPacket() {
+		return typeofPacket;
+	}
+
+	public void setTypeofPacket(int typeofPacket) {
 		this.typeofPacket = typeofPacket;
 	}
 	

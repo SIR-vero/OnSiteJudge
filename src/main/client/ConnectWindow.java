@@ -69,7 +69,7 @@ public class ConnectWindow extends JFrame {
 				 * Validate IP and port then Attempt to connect.
 				 */
 				
-				connect(textipAddress.getText(), Integer.parseInt(textPort.getText()));
+				connect(textipAddress.getText(), Integer.parseInt(textPort.getText()), loginID.getText(), password.getText());
 			}
 		});
 		btnConnect.setBounds(208, 404, 91, 23);
@@ -102,7 +102,7 @@ public class ConnectWindow extends JFrame {
 		contentPane.add(loginID);
 	}
 	
-	private void connect(String address, int port){
+	private void connect(String address, int port, String id, String pass){
 		System.out.println(address + ", " + port);
 		
 		Connect con = new Connect(address, port);
@@ -115,7 +115,7 @@ public class ConnectWindow extends JFrame {
 			 */
 		}
 		dispose();
-		new EchoClient(con);
+		new TestClient(con, id, pass);
 	}
 	
 	public static void main(String[] args) {
