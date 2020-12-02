@@ -1,15 +1,25 @@
 package main.server;
 
+import java.io.EOFException;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
 
+import main.client.Client;
 import main.packets.Packet;
 import main.packets.ServerParticipantPacket;
 
 public class Server implements Runnable {
+	
+	private ArrayList<Client> adminArrayList = new ArrayList<Client>();
+	private ArrayList<Client> judgeArrayList = new ArrayList<Client>();
+	private ArrayList<Client> participantArrayList = new ArrayList<Client>();
+	
 
 	private int port;
 	private ServerSocket serverSocket;
@@ -33,6 +43,7 @@ public class Server implements Runnable {
 	public void run() {
 		running = true;
 		System.out.println("Server started at port " + port);
+		loadStateFromDisk();
 		acceptConnections();
 	}
 	
@@ -68,10 +79,8 @@ public class Server implements Runnable {
 					outStream = new ObjectOutputStream(s.getOutputStream());
 					inStream = new ObjectInputStream(s.getInputStream());
 					recPack = (Packet)inStream.readObject();
-					System.out.println("received packet. " + recPack.getTypeofPacket());
 					if (recPack.getTypeofPacket() == 114) {
 						ServerParticipantPacket spPacket = (ServerParticipantPacket)recPack;
-						System.out.println("in if " + spPacket.getLoginID() + " " + spPacket.getPassword());
 						
 						//Authorize Client using recPack. Check for existence of the ID and password in the DB or files
 						//Demo Code
@@ -84,7 +93,6 @@ public class Server implements Runnable {
 							}
 					}
 					else {
-						System.out.println("in else " + recPack.getTypeofPacket());
 					}
 					
 				}catch (ClassNotFoundException | IOException e) {
@@ -95,4 +103,46 @@ public class Server implements Runnable {
 		loginClients.start();
 	}
 	
+	/**
+	 * Load any previous state or data at start of server (Synchronous)
+	 */
+	void loadStateFromDisk() {
+		//loading login credentials
+		FileInputStream loginFileInputStream = null;
+		try {
+			loginFileInputStream = new FileInputStream("./data/loginData.bin");
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		ObjectInputStream loginFileObjInputStream = null;
+		try {
+			loginFileObjInputStream = new ObjectInputStream(loginFileInputStream);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		Client c = null;
+		while(true) {
+			try {
+				c = (Client)loginFileObjInputStream.readObject();
+			} catch (ClassNotFoundException e) {
+				e.printStackTrace();
+				break;
+			} catch (EOFException e) {
+				break;
+			} catch (IOException e) {
+				e.printStackTrace();
+				break;
+			}
+			if (c.getType() == 1) {			//admin
+				adminArrayList.add(c);
+			}
+			else if (c.getType() == 2) {	//judge
+				judgeArrayList.add(c);
+			}  
+			else if (c.getType() == 3) {	//participants
+				participantArrayList.add(c);
+			}
+		}
+	}
 }

@@ -1,7 +1,9 @@
-package main.client;
+package test;
 
 import java.io.*;
 import java.net.Socket;
+
+import main.client.Connect;
 
 public class EchoClient {
 	private String line = null;

@@ -1,7 +1,8 @@
-package main.client;
+package test;
 
 import java.io.IOException;
 
+import main.client.Connect;
 import main.packets.ServerParticipantPacket;
 
 public class TestClient {
