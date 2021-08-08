@@ -1,0 +1,535 @@
+submissions/17.cpp: In function 'int main()':
+submissions/17.cpp:5:5: error: no match for 'operator>' (operand types are 'std::istream {aka std::basic_istream<char>}' and 'int')
+ cin > n;
+ ~~~~^~~
+submissions/17.cpp:5:5: note: candidate: operator>(int, int) <built-in>
+submissions/17.cpp:5:5: note:   no known conversion for argument 1 from 'std::istream {aka std::basic_istream<char>}' to 'int'
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\regex:62:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:110,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\regex.h:995:5: note: candidate: template<class _BiIter> bool std::__cxx11::operator>(const std::__cxx11::sub_match<_BiIter>&, const std::__cxx11::sub_match<_BiIter>&)
+     operator>(const sub_match<_BiIter>& __lhs, const sub_match<_BiIter>& __rhs)
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\regex.h:995:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::__cxx11::sub_match<_BiIter>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\regex:62:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:110,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\regex.h:1056:5: note: candidate: template<class _Bi_iter, class _Ch_traits, class _Ch_alloc> bool std::__cxx11::operator>(std::__cxx11::__sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>&, const std::__cxx11::sub_match<_BiIter>&)
+     operator>(const __sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>& __lhs,
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\regex.h:1056:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'std::__cxx11::__sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\regex:62:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:110,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\regex.h:1136:5: note: candidate: template<class _Bi_iter, class _Ch_traits, class _Ch_alloc> bool std::__cxx11::operator>(const std::__cxx11::sub_match<_BiIter>&, std::__cxx11::__sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>&)
+     operator>(const sub_match<_Bi_iter>& __lhs,
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\regex.h:1136:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::__cxx11::sub_match<_BiIter>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\regex:62:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:110,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\regex.h:1210:5: note: candidate: template<class _Bi_iter> bool std::__cxx11::operator>(const typename std::iterator_traits<_Iter>::value_type*, const std::__cxx11::sub_match<_BiIter>&)
+     operator>(typename iterator_traits<_Bi_iter>::value_type const* __lhs,
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\regex.h:1210:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   mismatched types 'const std::__cxx11::sub_match<_BiIter>' and 'int'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\regex:62:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:110,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\regex.h:1284:5: note: candidate: template<class _Bi_iter> bool std::__cxx11::operator>(const std::__cxx11::sub_match<_BiIter>&, const typename std::iterator_traits<_Iter>::value_type*)
+     operator>(const sub_match<_Bi_iter>& __lhs,
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\regex.h:1284:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::__cxx11::sub_match<_BiIter>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\regex:62:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:110,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\regex.h:1364:5: note: candidate: template<class _Bi_iter> bool std::__cxx11::operator>(const typename std::iterator_traits<_Iter>::value_type&, const std::__cxx11::sub_match<_BiIter>&)
+     operator>(typename iterator_traits<_Bi_iter>::value_type const& __lhs,
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\regex.h:1364:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   mismatched types 'const std::__cxx11::sub_match<_BiIter>' and 'int'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\regex:62:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:110,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\regex.h:1444:5: note: candidate: template<class _Bi_iter> bool std::__cxx11::operator>(const std::__cxx11::sub_match<_BiIter>&, const typename std::iterator_traits<_Iter>::value_type&)
+     operator>(const sub_match<_Bi_iter>& __lhs,
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\regex.h:1444:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::__cxx11::sub_match<_BiIter>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\forward_list:38:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:104,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\forward_list.h:1391:5: note: candidate: template<class _Tp, class _Alloc> bool std::operator>(const std::forward_list<_Tp, _Alloc>&, const std::forward_list<_Tp, _Alloc>&)
+     operator>(const forward_list<_Tp, _Alloc>& __lx,
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\forward_list.h:1391:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::forward_list<_Tp, _Alloc>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:95:0,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\valarray:1182:1: note: candidate: template<class _Tp> std::_Expr<std::_BinClos<std::__greater, std::_Constant, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__greater, _Tp>::result_type> std::operator>(const _Tp&, const std::valarray<_Tp>&)
+ _DEFINE_BINARY_OPERATOR(>, __greater)
+ ^
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\valarray:1182:1: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   mismatched types 'const std::valarray<_Tp>' and 'int'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:95:0,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\valarray:1182:1: note: candidate: template<class _Tp> std::_Expr<std::_BinClos<std::__greater, std::_ValArray, std::_Constant, _Tp, _Tp>, typename std::__fun<std::__greater, _Tp>::result_type> std::operator>(const std::valarray<_Tp>&, const _Tp&)
+ _DEFINE_BINARY_OPERATOR(>, __greater)
+ ^
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\valarray:1182:1: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::valarray<_Tp>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:95:0,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\valarray:1182:1: note: candidate: template<class _Tp> std::_Expr<std::_BinClos<std::__greater, std::_ValArray, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__greater, _Tp>::result_type> std::operator>(const std::valarray<_Tp>&, const std::valarray<_Tp>&)
+ _DEFINE_BINARY_OPERATOR(>, __greater)
+ ^
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\valarray:1182:1: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::valarray<_Tp>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\valarray:587:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:95,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\valarray_after.h:417:5: note: candidate: template<class _Dom> std::_Expr<std::_BinClos<std::__greater, std::_ValArray, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__greater, typename _Dom1::value_type>::result_type> std::operator>(const std::valarray<typename _Dom::value_type>&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(>, __greater)
+     ^
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\valarray_after.h:417:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   mismatched types 'const std::_Expr<_Dom1, typename _Dom1::value_type>' and 'int'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\valarray:587:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:95,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\valarray_after.h:417:5: note: candidate: template<class _Dom> std::_Expr<std::_BinClos<std::__greater, std::_Expr, std::_ValArray, _Dom, typename _Dom::value_type>, typename std::__fun<std::__greater, typename _Dom1::value_type>::result_type> std::operator>(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::valarray<typename _Dom::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(>, __greater)
+     ^
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\valarray_after.h:417:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::_Expr<_Dom1, typename _Dom1::value_type>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\valarray:587:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:95,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\valarray_after.h:417:5: note: candidate: template<class _Dom> std::_Expr<std::_BinClos<std::__greater, std::_Constant, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__greater, typename _Dom1::value_type>::result_type> std::operator>(const typename _Dom::value_type&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(>, __greater)
+     ^
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\valarray_after.h:417:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   mismatched types 'const std::_Expr<_Dom1, typename _Dom1::value_type>' and 'int'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\valarray:587:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:95,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\valarray_after.h:417:5: note: candidate: template<class _Dom> std::_Expr<std::_BinClos<std::__greater, std::_Expr, std::_Constant, _Dom, typename _Dom::value_type>, typename std::__fun<std::__greater, typename _Dom1::value_type>::result_type> std::operator>(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const typename _Dom::value_type&)
+     _DEFINE_EXPR_BINARY_OPERATOR(>, __greater)
+     ^
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\valarray_after.h:417:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::_Expr<_Dom1, typename _Dom1::value_type>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\valarray:587:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:95,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\valarray_after.h:417:5: note: candidate: template<class _Dom1, class _Dom2> std::_Expr<std::_BinClos<std::__greater, std::_Expr, std::_Expr, _Dom1, _Dom2>, typename std::__fun<std::__greater, typename _Dom1::value_type>::result_type> std::operator>(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::_Expr<_Dom2, typename _Dom2::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(>, __greater)
+     ^
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\valarray_after.h:417:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::_Expr<_Dom1, typename _Dom1::value_type>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\stack:61:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:89,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_stack.h:305:5: note: candidate: template<class _Tp, class _Seq> bool std::operator>(const std::stack<_Tp, _Seq>&, const std::stack<_Tp, _Seq>&)
+     operator>(const stack<_Tp, _Seq>& __x, const stack<_Tp, _Seq>& __y)
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_stack.h:305:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::stack<_Tp, _Seq>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\set:62:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:87,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_multiset.h:854:5: note: candidate: template<class _Key, class _Compare, class _Alloc> bool std::operator>(const std::multiset<_Key, _Compare, _Alloc>&, const std::multiset<_Key, _Compare, _Alloc>&)
+     operator>(const multiset<_Key,_Compare,_Alloc>& __x,
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_multiset.h:854:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::multiset<_Key, _Compare, _Alloc>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\set:61:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:87,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_set.h:871:5: note: candidate: template<class _Key, class _Compare, class _Alloc> bool std::operator>(const std::set<_Key, _Compare, _Alloc>&, const std::set<_Key, _Compare, _Alloc>&)
+     operator>(const set<_Key, _Compare, _Alloc>& __x,
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_set.h:871:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::set<_Key, _Compare, _Alloc>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\queue:64:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:86,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_queue.h:328:5: note: candidate: template<class _Tp, class _Seq> bool std::operator>(const std::queue<_Tp, _Seq>&, const std::queue<_Tp, _Seq>&)
+     operator>(const queue<_Tp, _Seq>& __x, const queue<_Tp, _Seq>& __y)
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_queue.h:328:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::queue<_Tp, _Seq>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\vector:64:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\queue:61,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:86,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_vector.h:1539:5: note: candidate: template<class _Tp, class _Alloc> bool std::operator>(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)
+     operator>(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_vector.h:1539:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::vector<_Tp, _Alloc>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\memory:82:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:82,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\shared_ptr.h:414:5: note: candidate: template<class _Tp> bool std::operator>(std::nullptr_t, const std::shared_ptr<_Tp1>&)
+     operator>(nullptr_t, const shared_ptr<_Tp>& __a) noexcept
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\shared_ptr.h:414:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   mismatched types 'const std::shared_ptr<_Tp1>' and 'int'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\memory:82:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:82,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\shared_ptr.h:409:5: note: candidate: template<class _Tp> bool std::operator>(const std::shared_ptr<_Tp1>&, std::nullptr_t)
+     operator>(const shared_ptr<_Tp>& __a, nullptr_t) noexcept
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\shared_ptr.h:409:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::shared_ptr<_Tp1>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\memory:82:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:82,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\shared_ptr.h:403:5: note: candidate: template<class _Tp1, class _Tp2> bool std::operator>(const std::shared_ptr<_Tp1>&, const std::shared_ptr<_Tp2>&)
+     operator>(const shared_ptr<_Tp1>& __a,
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\shared_ptr.h:403:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::shared_ptr<_Tp1>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\shared_ptr.h:52:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\memory:82,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:82,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\shared_ptr_base.h:1264:5: note: candidate: template<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator>(std::nullptr_t, const std::__shared_ptr<_Tp, _Lp>&)
+     operator>(nullptr_t, const __shared_ptr<_Tp, _Lp>& __a) noexcept
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\shared_ptr_base.h:1264:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   mismatched types 'const std::__shared_ptr<_Tp, _Lp>' and 'int'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\shared_ptr.h:52:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\memory:82,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:82,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\shared_ptr_base.h:1259:5: note: candidate: template<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator>(const std::__shared_ptr<_Tp, _Lp>&, std::nullptr_t)
+     operator>(const __shared_ptr<_Tp, _Lp>& __a, nullptr_t) noexcept
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\shared_ptr_base.h:1259:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::__shared_ptr<_Tp, _Lp>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\shared_ptr.h:52:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\memory:82,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:82,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\shared_ptr_base.h:1253:5: note: candidate: template<class _Tp1, class _Tp2, __gnu_cxx::_Lock_policy _Lp> bool std::operator>(const std::__shared_ptr<_Tp1, _Lp>&, const std::__shared_ptr<_Tp2, _Lp>&)
+     operator>(const __shared_ptr<_Tp1, _Lp>& __a,
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\shared_ptr_base.h:1253:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::__shared_ptr<_Tp1, _Lp>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\map:62:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:81,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_multimap.h:1003:5: note: candidate: template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator>(const std::multimap<_Key, _Tp, _Compare, _Alloc>&, const std::multimap<_Key, _Tp, _Compare, _Alloc>&)
+     operator>(const multimap<_Key, _Tp, _Compare, _Alloc>& __x,
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_multimap.h:1003:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::multimap<_Key, _Tp, _Compare, _Alloc>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\map:61:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:81,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_map.h:1338:5: note: candidate: template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator>(const std::map<_Key, _Tp, _Compare, _Alloc>&, const std::map<_Key, _Tp, _Compare, _Alloc>&)
+     operator>(const map<_Key, _Tp, _Compare, _Alloc>& __x,
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_map.h:1338:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::map<_Key, _Tp, _Compare, _Alloc>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\map:60:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:81,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_tree.h:1309:5: note: candidate: template<class _Key, class _Val, class _KeyOfValue, class _Compare, class _Alloc> bool std::operator>(const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&, const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&)
+     operator>(const _Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>& __x,
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_tree.h:1309:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\list:63:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:79,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_list.h:1900:5: note: candidate: template<class _Tp, class _Alloc> bool std::operator>(const std::__cxx11::list<_Tp, _Alloc>&, const std::__cxx11::list<_Tp, _Alloc>&)
+     operator>(const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_list.h:1900:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::__cxx11::list<_Tp, _Alloc>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\locale_conv.h:41:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\locale:43,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\iomanip:43,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:72,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\unique_ptr.h:737:5: note: candidate: template<class _Tp, class _Dp> bool std::operator>(std::nullptr_t, const std::unique_ptr<_Tp, _Dp>&)
+     operator>(nullptr_t, const unique_ptr<_Tp, _Dp>& __x)
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\unique_ptr.h:737:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   mismatched types 'const std::unique_ptr<_Tp, _Dp>' and 'int'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\locale_conv.h:41:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\locale:43,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\iomanip:43,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:72,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\unique_ptr.h:731:5: note: candidate: template<class _Tp, class _Dp> bool std::operator>(const std::unique_ptr<_Tp, _Dp>&, std::nullptr_t)
+     operator>(const unique_ptr<_Tp, _Dp>& __x, nullptr_t)
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\unique_ptr.h:731:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::unique_ptr<_Tp, _Dp>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\locale_conv.h:41:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\locale:43,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\iomanip:43,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:72,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\unique_ptr.h:725:5: note: candidate: template<class _Tp, class _Dp, class _Up, class _Ep> bool std::operator>(const std::unique_ptr<_Tp, _Dp>&, const std::unique_ptr<_Up, _Ep>&)
+     operator>(const unique_ptr<_Tp, _Dp>& __x,
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\unique_ptr.h:725:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::unique_ptr<_Tp, _Dp>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\functional:55:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:71,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\tuple:1369:5: note: candidate: template<class ... _TElements, class ... _UElements> constexpr bool std::operator>(const std::tuple<_Elements ...>&, const std::tuple<_Elements ...>&)
+     operator>(const tuple<_TElements...>& __t,
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\tuple:1369:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::tuple<_Elements ...>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\tuple:39:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\functional:55,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:71,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\array:259:5: note: candidate: template<class _Tp, unsigned int _Nm> bool std::operator>(const std::array<_Tp, _Nm>&, const std::array<_Tp, _Nm>&)
+     operator>(const array<_Tp, _Nm>& __one, const array<_Tp, _Nm>& __two)
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\array:259:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::array<_Tp, _Nm>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\deque:64:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:68,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_deque.h:2253:5: note: candidate: template<class _Tp, class _Alloc> bool std::operator>(const std::deque<_Tp, _Alloc>&, const std::deque<_Tp, _Alloc>&)
+     operator>(const deque<_Tp, _Alloc>& __x,
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_deque.h:2253:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::deque<_Tp, _Alloc>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\deque:64:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:68,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_deque.h:313:5: note: candidate: template<class _Tp, class _RefL, class _PtrL, class _RefR, class _PtrR> bool std::operator>(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&, const std::_Deque_iterator<_Tp, _RefR, _PtrR>&)
+     operator>(const _Deque_iterator<_Tp, _RefL, _PtrL>& __x,
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_deque.h:313:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::_Deque_iterator<_Tp, _Ref, _Ptr>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\deque:64:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:68,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_deque.h:306:5: note: candidate: template<class _Tp, class _Ref, class _Ptr> bool std::operator>(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&, const std::_Deque_iterator<_Tp, _Ref, _Ptr>&)
+     operator>(const _Deque_iterator<_Tp, _Ref, _Ptr>& __x,
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_deque.h:306:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::_Deque_iterator<_Tp, _Ref, _Ptr>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\string:52:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\locale_classes.h:40,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\ios_base.h:41,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\ios:42,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\istream:38,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\sstream:38,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\complex:45,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\ccomplex:39,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:52,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5198:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator>(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator>(const _CharT* __lhs,
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5198:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   mismatched types 'const _CharT*' and 'std::basic_istream<char>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\string:52:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\locale_classes.h:40,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\ios_base.h:41,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\ios:42,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\istream:38,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\sstream:38,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\complex:45,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\ccomplex:39,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:52,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5186:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator>(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator>(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5186:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\string:52:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\locale_classes.h:40,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\ios_base.h:41,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\ios:42,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\istream:38,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\sstream:38,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\complex:45,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\ccomplex:39,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:52,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5173:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator>(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator>(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5173:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_algobase.h:67:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\char_traits.h:39,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\ios:40,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\istream:38,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\sstream:38,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\complex:45,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\ccomplex:39,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:52,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_iterator.h:1167:5: note: candidate: template<class _Iterator> bool std::operator>(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)
+     operator>(const move_iterator<_Iterator>& __x,
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_iterator.h:1167:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::move_iterator<_IteratorL>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_algobase.h:67:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\char_traits.h:39,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\ios:40,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\istream:38,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\sstream:38,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\complex:45,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\ccomplex:39,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:52,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_iterator.h:1161:5: note: candidate: template<class _IteratorL, class _IteratorR> bool std::operator>(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)
+     operator>(const move_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_iterator.h:1161:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::move_iterator<_IteratorL>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_algobase.h:67:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\char_traits.h:39,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\ios:40,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\istream:38,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\sstream:38,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\complex:45,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\ccomplex:39,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:52,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_iterator.h:367:5: note: candidate: template<class _IteratorL, class _IteratorR> bool std::operator>(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator>(const reverse_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_iterator.h:367:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::reverse_iterator<_Iterator>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_algobase.h:67:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\char_traits.h:39,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\ios:40,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\istream:38,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\sstream:38,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\complex:45,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\ccomplex:39,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:52,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_iterator.h:310:5: note: candidate: template<class _Iterator> bool std::operator>(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator>(const reverse_iterator<_Iterator>& __x,
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_iterator.h:310:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::reverse_iterator<_Iterator>'
+ cin > n;
+       ^
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_algobase.h:64:0,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\char_traits.h:39,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\ios:40,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\istream:38,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\sstream:38,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\complex:45,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\ccomplex:39,
+                 from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:52,
+                 from submissions/17.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_pair.h:450:5: note: candidate: template<class _T1, class _T2> constexpr bool std::operator>(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator>(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^~~~~~~~
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_pair.h:450:5: note:   template argument deduction/substitution failed:
+submissions/17.cpp:5:7: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'const std::pair<_T1, _T2>'
+ cin > n;
+       ^

@@ -3,13 +3,17 @@
 <head>
 
 <title>ADMIN LOGIN</title>
-<link rel="stylesheet" href="../css/indexcss.css">
+<link rel="stylesheet" href="../css/indexcssAdmin.css">
 </head>
 
 <body>
 
+<button onclick="document.location='../index.html'">USER LOGIN</button>
+
 <div>
+<h1 class = "AdminLogin">
 	WELCOME TO ADMIN LOGIN
+</h1>
 </div>
 
  <form class="box" method="post" action="checkLoginGentoken_admin.php">

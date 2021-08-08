@@ -2,7 +2,18 @@ body{
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
-	background: #34495e;
+	background-image: url("../assets/cool-background.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.admin{
+	position: absolute;
+	right: 0;
+}
+
+.AdminLogin{
+	text-align: center;
 }
 
 .box{
@@ -14,6 +25,7 @@ body{
 	transform: translate(-50%, -50%);
 	background: #191919;
 	text-align: center;
+	border-radius: 24px;
 }
 
 .box h1{

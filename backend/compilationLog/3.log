@@ -1,0 +1,22 @@
+submissions/3.cpp:2:1: error: 'uisng' does not name a type
+ uisng namespace std;
+ ^~~~~
+submissions/3.cpp: In function 'int main()':
+submissions/3.cpp:5:1: error: 'cin' was not declared in this scope
+ cin >> n;
+ ^~~
+submissions/3.cpp:5:1: note: suggested alternative:
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:75:0,
+                 from submissions/3.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\iostream:60:18: note:   'std::cin'
+   extern istream cin;  /// Linked to standard input
+                  ^~~
+submissions/3.cpp:6:1: error: 'cout' was not declared in this scope
+ cout << n*n;
+ ^~~~
+submissions/3.cpp:6:1: note: suggested alternative:
+In file included from f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\mingw32\bits\stdc++.h:75:0,
+                 from submissions/3.cpp:1:
+f:\installationdirectory\newmingw\lib\gcc\mingw32\6.3.0\include\c++\iostream:61:18: note:   'std::cout'
+   extern ostream cout;  /// Linked to standard output
+                  ^~~~

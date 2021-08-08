@@ -1,0 +1,24 @@
+8.exe < ../testCases/1.txt > ../codeOut/8.txt
+cd ../submissionsExec && 9.exe < ../testCases/1.txt > ../codeOut/9.txt
+cd ../submissionsExec && 10.exe < ../testCases/1.txt > ../codeOut/10.txt
+cd ../submissionsExec && 11.exe < ../testCases/1.txt > ../codeOut/11.txt
+cd ../submissionsExec && 12.exe < ../testCases/2.txt > ../codeOut/12.txt
+cd ../submissionsExec && 14.exe < ../testCases/1.txt > ../codeOut/14.txt
+cd ../submissionsExec && 15.exe < ../testCases/1.txt > ../codeOut/15.txt
+cd ../submissionsExec && 16.exe < ../testCases/1.txt > ../codeOut/16.txt
+cd ../submissionsExec && 18.exe < ../testCases/1.txt > ../codeOut/18.txt
+cd ../submissionsExec && 19.exe < ../testCases/1.txt > ../codeOut/19.txt
+cd ../submissionsExec && 20.exe < ../testCases/1.txt > ../codeOut/20.txt
+cd ../submissionsExec && 21.exe < ../testCases/1.txt > ../codeOut/21.txt
+cd ../submissionsExec && 22.exe < ../testCases/1.txt > ../codeOut/22.txt
+cd ../submissionsExec && 23.exe < ../testCases/1.txt > ../codeOut/23.txt
+cd ../submissionsExec && 24.exe < ../testCases/1.txt > ../codeOut/24.txt
+cd ../submissionsExec && 25.exe < ../testCases/1.txt > ../codeOut/25.txt
+cd ../submissionsExec && 26.exe < ../testCases/1.txt > ../codeOut/26.txt
+cd ../submissionsExec && 28.exe < ../testCases/2.txt > ../codeOut/28.txt
+cd ../submissionsExec && 29.exe < ../testCases/2.txt > ../codeOut/29.txt
+cd ../submissionsExec && 30.exe < ../testCases/1.txt > ../codeOut/30.txt
+cd ../submissionsExec && 31.exe < ../testCases/2.txt > ../codeOut/31.txt
+cd ../submissionsExec && 32.exe < ../testCases/1.txt > ../codeOut/32.txt
+cd ../submissionsExec && 33.exe < ../testCases/2.txt > ../codeOut/33.txt
+cd ../submissionsExec && 34.exe < ../testCases/1.txt > ../codeOut/34.txt

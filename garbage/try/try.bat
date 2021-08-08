@@ -1,0 +1,1 @@
+Measure-Command {a < in.txt > out.txt}

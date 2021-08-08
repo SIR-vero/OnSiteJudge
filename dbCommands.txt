@@ -13,12 +13,12 @@ CREATE TABLE `user_token` (
   `timemodified` timestamp NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1;
 
-CREATE TABLE 'contest' (
-	'id' int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	'contest_name' varchar(100) NOT NULL,
-	'duration_in_min' int(11) NOT NULL,
-	'questions' int(11) NOT NULL,
-	'active' boolean NOT NULL
+CREATE TABLE `contest` (
+	`id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`contest_name` varchar(100) NOT NULL,
+	`duration_in_min` int(11) NOT NULL,
+	`questions` int(11) NOT NULL,
+	`active` boolean NOT NULL
 	) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 	
 CREATE TABLE `submissions` (

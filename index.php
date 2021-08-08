@@ -8,6 +8,13 @@
 
 <body>
 
+<button class = "admin" onclick="document.location='admin/index.php'">ADMIN LOGIN</button>
+
+<div>
+<h1 class = "AdminLogin">
+	WELCOME TO USER LOGIN
+</h1>
+</div>
 
  <form class="box" method="post" action="checkLoginGentoken.php">
 

@@ -1,0 +1,21 @@
+submissions/27.cpp:4:21: warning: character constant too long for its type
+ if (isset($_SESSION['username'])) {
+                     ^~~~~~~~~~
+submissions/27.cpp:5:90: warning: character constant too long for its type
+   $result = mysqli_query($con, "SELECT token FROM user_token where username='".$_SESSION['username']."'");
+                                                                                          ^~~~~~~~~~
+submissions/27.cpp:10:18: warning: character constant too long for its type
+    $token = $row['token'];
+                  ^~~~~~~
+submissions/27.cpp:12:17: warning: character constant too long for its type
+    if($_SESSION['token'] != $token){
+                 ^~~~~~~
+submissions/27.cpp:21:21: warning: character constant too long for its type
+ if(!isset($_SESSION['username'])){
+                     ^~~~~~~~~~
+submissions/27.cpp:1:1: error: expected unqualified-id before '<' token
+ <?php
+ ^
+submissions/27.cpp:4:1: error: expected unqualified-id before 'if'
+ if (isset($_SESSION['username'])) {
+ ^~

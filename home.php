@@ -23,9 +23,9 @@ if(isset($_POST['but_logout'])){
 	$sql_query = "SELECT COUNT(*) as cntCntst FROM contest";
 	$result = mysqli_query($con, $sql_query);
 	$row = mysqli_fetch_array($result);
-	
+
 	$count = $row['cntCntst'];
-	
+
 	if($count == 0)
 	{
 		echo "<h1>NO CONTEST CONFIGURED</h1>";
@@ -34,7 +34,6 @@ if(isset($_POST['but_logout'])){
 	{
 		header('Location: submissions.php');
 	}
-  
   ?>
   
   <form method='post' action="">

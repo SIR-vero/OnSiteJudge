@@ -1,5 +1,9 @@
 #include <bits/stdc++.h>
+#include <chrono>
+#include<thread>
+#include<windows.h>
 using namespace std;
+using namespace std::chrono;
 
 
 #ifndef DEFINE_H
@@ -21,6 +25,9 @@ using namespace std;
 #endif
 
 
+int Run_id, Ques_id, Time_limit, Lang;
+ofstream commandFileHandle;
+
 #ifndef COMPILE_H
 #define COMPILE_H
 
@@ -37,7 +44,7 @@ bool is_file_exist(const char *fileName)
     return infile.good();
 }
 
-int CompileCode(const int Run_id, const int Lang)   //Returns 0 if file not found, SUCCESS if compiles successfully
+int CompileCode()   //Returns 0 if file not found, SUCCESS if compiles successfully
                                                     //CE if compilation error occurs
 {
     std::string FilePathString = "../submissions/";
@@ -113,38 +120,122 @@ int CompileCode(const int Run_id, const int Lang)   //Returns 0 if file not foun
 #ifndef RUN_H
 #define RUN_H
 
-int RunCode(const int Run_id, const int Lang, const int Ques_id, const int Time_limit)
+static bool stillAlive;
+static bool killed = 0;
+
+void kill_c_cpp(){
+	Sleep(Time_limit*1000);
+	if(stillAlive){
+        //taskkill /F /IM %2.exe /T > ../tleLog/%2n.log 2> ../tleLog/%2.log
+        std::string comm = "taskkill /F /IM " + to_string(Run_id) + ".exe " + "/T " + "> ../tleLog/" + to_string(Run_id)+"n.log 2> ../tleLog/"+to_string(Run_id)+".log";
+        const char *command = comm.c_str();
+		system(command);
+		killed = 1;
+	}
+}
+
+void kill_java(){
+	Sleep(Time_limit*1000);
+	if(stillAlive){
+        //taskkill /F /IM java.exe /T > ../tleLog/%2n.log 2> ../tleLog/%2.log
+        std::string comm = "taskkill /F /IM java.exe /T > ../tleLog/" + to_string(Run_id)+"n.log 2> ../tleLog/"+to_string(Run_id)+".log";
+        const char *command = comm.c_str();
+		system(command);
+		killed = 1;
+	}
+}
+
+void kill_py(){
+	Sleep(Time_limit*1000);
+	if(stillAlive){
+        //taskkill /F /IM python.exe /T > ../tleLog/%2n.log 2> ../tleLog/%2.log
+        std::string comm = "taskkill /F /IM python.exe /T > ../tleLog/" + to_string(Run_id)+"n.log 2> ../tleLog/"+to_string(Run_id)+".log";
+        const char *command = comm.c_str();
+		system(command);
+		killed = 1;
+	}
+}
+
+int RunCode()
 {
    if (Lang == C_LANG || Lang == CPP_LANG)
    {
-        std::string comm = "Run_C_CPP.bat " + to_string(Run_id) + " " + to_string(Ques_id) + " " + to_string(Time_limit);
+        //%1 < ../testCases/%2.txt > ../codeOut/%1.txt
+        std::string comm ="cd ../submissionsExec && " + to_string(Run_id) + ".exe < ../testCases/" + to_string(Ques_id) + ".txt > ../codeOut/" + to_string(Run_id) + ".txt";
+        commandFileHandle << comm << "\n";
         const char *command = comm.c_str();
-        system(command);
+        //system(command);
+        std::thread t1(kill_c_cpp);
+        auto start = high_resolution_clock::now();
+        stillAlive = 1;
+        int retval = system(command);
+        stillAlive = 0;
+        auto stop = high_resolution_clock::now();
+        auto duration = duration_cast<microseconds>(stop - start);
+        t1.join();
+
+        if(killed)
+            return TLE;
+        else{
+            if (retval != 0)
+                return RE;
+			ofstream execTimeFileHandle;
+			string execTimeFilePath = "./executionTimeLog/" + to_string(Run_id) + ".txt";
+			execTimeFileHandle.open(execTimeFilePath);
+            execTimeFileHandle << duration << endl;
+            return SUCCESS;
+        }
    }
    if (Lang == JAVA_LANG)
    {
         std::string comm = "Run_JAVA.bat " + to_string(Run_id) + " " + to_string(Ques_id) + " " + to_string(Time_limit);
         const char *command = comm.c_str();
-        system(command);
+        //system(command);
+        std::thread t1(kill_java);
+        auto start = high_resolution_clock::now();
+        stillAlive = 1;
+        int retval = system(command);
+        stillAlive = 0;
+        auto stop = high_resolution_clock::now();
+        auto duration = duration_cast<microseconds>(stop - start);
+        t1.join();
+
+        if(killed)
+            return TLE;
+        else{
+//            if (retval != 0)
+//                return RE;
+            std::string RElogfile =  "../runtimeLog/" + to_string(Run_id) + ".log";
+            if (!IsEmpty(RElogfile.c_str()))
+                return RE;
+            return SUCCESS;
+        }
    }
    if (Lang == PYTHON3_LANG)
    {
         std::string comm = "Run_PYTHON3.bat " + to_string(Run_id) + " " + to_string(Ques_id) + " " + to_string(Time_limit);
         const char *command = comm.c_str();
-        system(command);
-   }
-   if (Lang != C_LANG && Lang != CPP_LANG)
-   {
-       std::string RElogfile =  "../runtimeLog/" + to_string(Run_id) + ".log";
-       if (!IsEmpty(RElogfile.c_str()))
-            return RE;
-   }
+        //system(command);
+        std::thread t1(kill_py);
+        auto start = high_resolution_clock::now();
+        stillAlive = 1;
+        int retval = system(command);
+        stillAlive = 0;
+        auto stop = high_resolution_clock::now();
+        auto duration = duration_cast<microseconds>(stop - start);
+        t1.join();
 
-   std::string TLElogfile = "../tleLog/" + to_string(Run_id) + "n" + ".log";
-   if (!IsEmpty(TLElogfile.c_str()))
-        return TLE;
-    else
-        return SUCCESS;
+        if(killed)
+            return TLE;
+        else{
+//            if (retval != 0)
+//                return RE;
+            std::string RElogfile =  "../runtimeLog/" + to_string(Run_id) + ".log";
+            if (!IsEmpty(RElogfile.c_str()))
+                return RE;
+            return SUCCESS;
+        }
+   }
 }
 
 
@@ -157,7 +248,7 @@ int RunCode(const int Run_id, const int Lang, const int Ques_id, const int Time_
 #define VALIDATOR_H
 
 
-int DifferenceValidator (int Run_id, int Ques_id)
+int DifferenceValidator ()
 {
 
     std::string answerFile = "../answerFiles/" + to_string(Ques_id) + ".txt";
@@ -198,14 +289,15 @@ int DifferenceValidator (int Run_id, int Ques_id)
 
 int main(int argc, char *args[])
 {
-    int runid, quesid, tl, lang;
-    runid = atoi(args[1]);
-    quesid = atoi(args[2]);
-    tl = atoi(args[3]);
-    lang = atoi(args[4]);
+
+    commandFileHandle.open("../commandLog/command.txt", ios::app);
+    Run_id = atoi(args[1]);
+    Ques_id = atoi(args[2]);
+    Time_limit = atoi(args[3]);
+    Lang = atoi(args[4]);
 
     int response;
-    response = CompileCode(runid, lang);
+    response = CompileCode();
     if (response != SUCCESS)
     {
         cout << response << endl;
@@ -213,7 +305,7 @@ int main(int argc, char *args[])
     }
     else if (response == SUCCESS)
     {
-        response = RunCode(runid, lang, quesid, tl);
+        response = RunCode();
         if (response != SUCCESS)
         {
             cout << response << endl;
@@ -221,7 +313,7 @@ int main(int argc, char *args[])
         }
         else if (response == SUCCESS)
         {
-            response = DifferenceValidator(runid, quesid);
+            response = DifferenceValidator();
             cout << response << endl;
         }
     }
